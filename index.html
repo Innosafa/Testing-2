@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="description" content="Kibwezi Eastview hotel and hospitality website" />
   <title>KIBWEZI EASTVIEW</title>
   <style>
     :root {
@@ -14,40 +15,61 @@
       --card: #ffffff;
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
     }
+
     * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--text);
       background: var(--bg);
       line-height: 1.6;
+      overflow-x: hidden;
     }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+    }
+
     .container {
       width: min(1120px, calc(100% - 28px));
       margin: 0 auto;
     }
+
     .hero {
       min-height: 520px;
       display: flex;
       align-items: center;
-      background-image: linear-gradient(rgba(15,23,42,.6), rgba(15,23,42,.6)), url('image-002.webp');
+      background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('image-002.webp');
       background-size: cover;
       background-position: center;
       color: white;
     }
+
     .hero-inner {
       padding: 60px 0;
     }
+
     h1 {
       margin: 0 0 16px;
       font-size: clamp(2.1rem, 4vw, 4rem);
       line-height: 1.1;
     }
+
     .tag {
       display: inline-block;
       padding: 8px 14px;
-      background: rgba(212, 175, 55, .18);
-      border: 1px solid rgba(212, 175, 55, .7);
+      background: rgba(212, 175, 55, 0.18);
+      border: 1px solid rgba(212, 175, 55, 0.7);
       border-radius: 999px;
       color: var(--gold);
       font-size: 12px;
@@ -56,55 +78,77 @@
       font-weight: 700;
       margin-bottom: 18px;
     }
+
     .lead {
       max-width: 700px;
       font-size: 1.1rem;
-      color: rgba(255,255,255,.88);
+      color: rgba(255, 255, 255, 0.88);
       margin-bottom: 24px;
     }
+
     .btn-row {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
+      align-items: center;
     }
+
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
       text-decoration: none;
       padding: 12px 18px;
       border-radius: 10px;
       font-weight: 700;
-      transition: .2s ease;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
     .btn-primary {
       background: var(--gold);
       color: #1b1b1b;
     }
+
     .btn-secondary {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.28);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.28);
       color: white;
     }
+
+    main {
+      padding-top: 18px;
+    }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 22px;
       padding: 36px 0 20px;
     }
+
     .card {
       background: var(--card);
       border-radius: 18px;
       box-shadow: var(--shadow);
       overflow: hidden;
     }
+
     .card img {
-      display: block;
       width: 100%;
       height: 220px;
       object-fit: cover;
     }
+
     .card-body {
       padding: 18px 18px 20px;
     }
+
     .small-label {
       display: block;
       color: var(--primary);
@@ -114,56 +158,80 @@
       font-weight: 700;
       margin-bottom: 10px;
     }
+
     h2 {
       font-size: clamp(1.7rem, 2vw, 2.4rem);
       margin: 0 0 12px;
     }
+
     p {
       margin: 0;
       color: var(--muted);
     }
+
     .gallery {
       padding: 28px 0 48px;
     }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 18px;
       margin-top: 20px;
     }
+
     .gallery-item {
       background: white;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: var(--shadow);
     }
+
     .gallery-item img {
-      display: block;
       width: 100%;
       height: 220px;
       object-fit: cover;
     }
+
     .gallery-item .caption {
       padding: 12px 14px 16px;
     }
+
     .gallery-item .caption strong {
       display: block;
       color: var(--text);
       margin-bottom: 4px;
     }
+
     .gallery-item .caption span {
       color: var(--muted);
       font-size: 14px;
     }
+
+    #booking {
+      padding-bottom: 56px;
+    }
+
     footer {
       background: #0f172a;
-      color: rgba(255,255,255,.8);
+      color: rgba(255, 255, 255, 0.8);
       padding: 24px 0;
       text-align: center;
     }
+
     @media (max-width: 600px) {
-      .hero { min-height: 420px; }
-      .btn-row { flex-direction: column; align-items: flex-start; }
+      .hero {
+        min-height: 420px;
+      }
+
+      .btn-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -183,7 +251,7 @@
   <main class="container">
     <section class="cards">
       <article class="card">
-        <img src="image-005.webp" alt="Kibwezi room" />
+        <img src="image-005.webp" alt="Kibwezi room" loading="lazy" />
         <div class="card-body">
           <span class="small-label">Kibwezi</span>
           <h2>Executive Rooms</h2>
@@ -192,7 +260,7 @@
       </article>
 
       <article class="card">
-        <img src="image-011.webp" alt="Wote room" />
+        <img src="image-011.webp" alt="Wote room" loading="lazy" />
         <div class="card-body">
           <span class="small-label">Wote</span>
           <h2>Premium Suites</h2>
@@ -201,7 +269,7 @@
       </article>
 
       <article class="card">
-        <img src="image-012.jpg" alt="Food & catering" />
+        <img src="image-012.jpg" alt="Food & catering" loading="lazy" />
         <div class="card-body">
           <span class="small-label">Dining</span>
           <h2>Fresh Food</h2>
@@ -213,16 +281,16 @@
     <section class="gallery" id="gallery">
       <h2>Photo Gallery</h2>
       <div class="gallery-grid">
-        <div class="gallery-item"><img src="image-001.webp" alt="Wote at night" /><div class="caption"><strong>Wote at Night</strong><span>Warm evening ambience</span></div></div>
-        <div class="gallery-item"><img src="image-002.webp" alt="Aerial view" /><div class="caption"><strong>Aerial Panorama</strong><span>Kibwezi hotel view</span></div></div>
-        <div class="gallery-item"><img src="image-003.webp" alt="Exterior building" /><div class="caption"><strong>Exterior</strong><span>Modern hotel frontage</span></div></div>
-        <div class="gallery-item"><img src="image-006.webp" alt="Garden wildlife" /><div class="caption"><strong>Garden</strong><span>Wildlife scenery</span></div></div>
-        <div class="gallery-item"><img src="image-007.webp" alt="Conference hall" /><div class="caption"><strong>Conference Hall</strong><span>Events and meetings</span></div></div>
-        <div class="gallery-item"><img src="image-013.jpg" alt="Reception and bar" /><div class="caption"><strong>Reception</strong><span>Guest service area</span></div></div>
+        <div class="gallery-item"><img src="image-001.webp" alt="Wote at night" loading="lazy" /><div class="caption"><strong>Wote at Night</strong><span>Warm evening ambience</span></div></div>
+        <div class="gallery-item"><img src="image-002.webp" alt="Aerial view" loading="lazy" /><div class="caption"><strong>Aerial Panorama</strong><span>Kibwezi hotel view</span></div></div>
+        <div class="gallery-item"><img src="image-003.webp" alt="Exterior building" loading="lazy" /><div class="caption"><strong>Exterior</strong><span>Modern hotel frontage</span></div></div>
+        <div class="gallery-item"><img src="image-006.webp" alt="Garden wildlife" loading="lazy" /><div class="caption"><strong>Garden</strong><span>Wildlife scenery</span></div></div>
+        <div class="gallery-item"><img src="image-007.webp" alt="Conference hall" loading="lazy" /><div class="caption"><strong>Conference Hall</strong><span>Events and meetings</span></div></div>
+        <div class="gallery-item"><img src="image-013.jpg" alt="Reception and bar" loading="lazy" /><div class="caption"><strong>Reception</strong><span>Guest service area</span></div></div>
       </div>
     </section>
 
-    <section id="booking" style="padding-bottom: 56px;">
+    <section id="booking">
       <h2>Book a Stay</h2>
       <p style="margin-bottom: 18px;">Call or message our team to reserve a room at either branch.</p>
       <div class="btn-row">
